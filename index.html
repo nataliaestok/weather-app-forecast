@@ -8,11 +8,49 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <h1>What's up bitches</h1>
 
-    <p>test</p>
+<form class="container-search">
 
-    <p>test2</p>
+    <label for="city-search">Search the city</label>
+    <input type="search" placeholder="Search a city" íd="city-search">
+    <input type="submit" value="Show me the weather">
+
+</form>
+
+<hr>
+
+<section class="container-results">
+
+    <div class="results-city">
+        <h1>New York, NY, USA</h1>
+        <ul>
+            <li>Fri 5 pm</li>
+            <li>Clear</li>
+        </ul>
+    </div>
+
+    <div class="results-details">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
+        <p>12 °C / °F</p>
+
+        <ul>
+            <li>Precipation: 0%</li>
+            <li>Humidity: 10%</li>
+            <li>Wind: 25%</li>
+        </ul>  
+    </div>
+
+</section>
+
+<hr>
+
+<section class="container-forecast">
+
+</section>
+
+<small>
+    <a href="https://github.com/nataliaestok/weather-app-forecast" target="_blank">Open-source code</a> by Natalia
+</small>
 
 
     <script src="src/app.js"></script>
