@@ -1,0 +1,153 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.weather-app {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+}
+
+.devider {
+  border: 1px dashed #E6E6E6;
+  padding: 50px auto;
+  opacity: 0.6;
+}
+
+.container-search {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#city-search {
+  height: 42px;
+  padding: 15px 15px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #d3d3d3;
+  flex-grow: 3;
+}
+
+#btn-submit {
+  background-color: #14279B;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 25px;
+  border: none;
+  height: 42px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-left: 15px;
+  transition: all 200ms ease-in-out;
+}
+
+#btn-submit:hover {
+  background-color: white;
+  color: #14279B;
+  border: 1px solid #14279B;
+}
+
+.container-results {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container-results ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+
+  color: #E6E6E6;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+div.results-details, div.results-city, div.results-temperature {
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+div.results-details li{
+  line-height: 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: #212121;
+}
+
+div.results-temperature {
+display: flex;
+align-items: center;
+margin: 10px;
+}
+
+#current-temperature {
+  padding-left: 10px;
+  
+  }
+
+.results-city li{
+  display: inline;
+  font-size: 16px;
+  color: #212121;
+}
+
+.results-city {
+  margin: 10px;
+}
+
+h1{
+  padding-bottom: 0px;
+  margin-bottom: 12px;
+  color: #14279B;
+  font-size: 25px;
+}
+
+.footer{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.results-temperature strong {
+  color: #14279B;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.results-temperature .units{
+  position: relative;
+  font-size: 16px;
+  top: -25px;
+  padding-left: 8px;
+}
+
+.results-temperature a {
+  color: #14279B;
+  text-decoration: none;
+}
+
+
+.footer {
+  font-size: 16px;
+  color: darkgrey;
+}
+
+.footer a {
+  font-size: 16px;
+  color: darkgrey;
+}
+
+.footer a:hover {
+  color: #14279B;
+}
