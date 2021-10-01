@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecast App</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-   
     <div class="weather-app">
-      <form class="container-search">
-        <input type="search" placeholder="Search a city..." id="city-search" />
+      <form id="container-search">
+        <input
+          type="search"
+          placeholder="Search a city..."
+          id="city-search"
+          autocomplete="off"
+        />
         <input type="submit" value="Show me the weather" id="btn-submit" />
       </form>
 
       <hr class="devider" />
 
       <section class="container-results">
-
         <div class="results-city">
-          <h1>New York, NY, USA</h1>
+          <h1 id="city"></h1>
           <ul>
-            <li>Fri 5 pm</li>
-            <li>Clear</li>
+            <li><span id="date"></span></li>
+            <li id="description"></li>
           </ul>
         </div>
 
@@ -36,15 +44,17 @@
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
             alt="Cloudy"
+            id="icon"
           />
-          <p id="current-temperature"><strong>12</strong><span class="units">°C / <a href="#">°F</a></span></p>
+          <p class="current-temperature">
+            <strong id="temperature"></strong><span class="units">°C</span>
+          </p>
         </div>
 
         <div class="results-details">
           <ul>
-            <li>Precipation: 0%</li>
-            <li>Humidity: 10%</li>
-            <li>Wind: 25%</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind speed: <span id="wind"></span>km/h</li>
           </ul>
         </div>
       </section>
@@ -54,8 +64,11 @@
       <section class="container-forecast"></section>
 
       <section class="footer">
-        <a href="https://github.com/nataliaestok/weather-app-forecast"
-          target="_blank">Open-source code</a>
+        <a
+          href="https://github.com/nataliaestok/weather-app-forecast"
+          target="_blank"
+          >Open-source code</a
+        >
         by Natalia
       </section>
     </div>

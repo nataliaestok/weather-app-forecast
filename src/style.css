@@ -1,22 +1,22 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .weather-app {
   max-width: 750px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   border-radius: 8px;
 }
 
 .devider {
-  border: 1px dashed #E6E6E6;
+  border: 1px dashed #e6e6e6;
   padding: 50px auto;
   opacity: 0.6;
 }
 
-.container-search {
+#container-search {
   padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,7 @@ body {
 }
 
 #btn-submit {
-  background-color: #14279B;
+  background-color: #14279b;
   font-weight: 500;
   font-size: 16px;
   padding: 10px 25px;
@@ -49,8 +49,8 @@ body {
 
 #btn-submit:hover {
   background-color: white;
-  color: #14279B;
-  border: 1px solid #14279B;
+  color: #14279b;
+  border: 1px solid #14279b;
 }
 
 .container-results {
@@ -66,18 +66,20 @@ body {
   margin: 0px;
   padding: 0px;
 
-  color: #E6E6E6;
+  color: #e6e6e6;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
 }
 
-div.results-details, div.results-city, div.results-temperature {
-  margin-top:auto;
-  margin-bottom:auto;
+div.results-details,
+div.results-city,
+div.results-temperature {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-div.results-details li{
+div.results-details li {
   line-height: 20px;
   margin: 10px;
   font-size: 16px;
@@ -85,18 +87,16 @@ div.results-details li{
 }
 
 div.results-temperature {
-display: flex;
-align-items: center;
-margin: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
 }
 
-#current-temperature {
+div.results-temperature p {
   padding-left: 10px;
-  
-  }
+}
 
-.results-city li{
-  display: inline;
+.results-city li {
   font-size: 16px;
   color: #212121;
 }
@@ -105,27 +105,27 @@ margin: 10px;
   margin: 10px;
 }
 
-h1{
+h1 {
   padding-bottom: 0px;
   margin-bottom: 12px;
-  color: #14279B;
+  color: #14279b;
   font-size: 25px;
 }
 
-.footer{
+.footer {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 0;
 }
 
 .results-temperature strong {
-  color: #14279B;
+  color: #14279b;
   font-size: 50px;
   font-weight: 700;
   line-height: 1;
 }
 
-.results-temperature .units{
+.results-temperature .units {
   position: relative;
   font-size: 16px;
   top: -25px;
@@ -133,10 +133,9 @@ h1{
 }
 
 .results-temperature a {
-  color: #14279B;
+  color: #14279b;
   text-decoration: none;
 }
-
 
 .footer {
   font-size: 16px;
@@ -149,5 +148,9 @@ h1{
 }
 
 .footer a:hover {
-  color: #14279B;
+  color: #14279b;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
