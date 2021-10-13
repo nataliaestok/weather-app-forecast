@@ -14,6 +14,7 @@ body {
   border: 1px dashed #e6e6e6;
   padding: 50px auto;
   opacity: 0.6;
+  display: block;
 }
 
 #container-search {
@@ -140,6 +141,7 @@ h1 {
 .footer {
   font-size: 16px;
   color: darkgrey;
+  display:block;
 }
 
 .footer a {
@@ -154,3 +156,16 @@ h1 {
 li:first-letter {
   text-transform: capitalize;
 }
+
+#weather-forecast {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.weather-forecast-prediction {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
