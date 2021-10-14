@@ -71,3 +71,38 @@ function handleSubmit(event){
 
 let form = document.querySelector("#container-search");
 form.addEventListener("submit", handleSubmit);
+
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<section class="weather-forecast-prediction">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <section class="weather-forecast-prediction" id="forecast">
+
+        <div>
+        <h3 class="weather-forecast-date">${day}</h3>
+        <img id="center" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
+        <div>
+        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-max">18 °C </span> </div>
+        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-min">12 °C </span> </div>
+        </div>
+      </div>
+
+
+      </section>
+        
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</section>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
+
+displayForecast();

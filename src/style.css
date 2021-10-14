@@ -165,7 +165,32 @@ li:first-letter {
 
 .weather-forecast-prediction {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding-right: 40px;
   align-content: center;
+  margin: 0;
 }
 
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures{
+  display: inline;
+}
+
+.weather-forecast-temperature-max{
+  padding-right: 10px;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+#center {
+  display: block;
+
+  margin: 10px auto;
+}
