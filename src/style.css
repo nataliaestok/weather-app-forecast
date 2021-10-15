@@ -167,6 +167,7 @@ li:first-letter {
   display: flex;
   justify-content: flex-start;
   padding-right: 50px;
+  padding-bottom: 15px;
   align-content: center;
   margin: 0;
 }
@@ -176,7 +177,7 @@ li:first-letter {
 }
 
 .weather-forecast-temperatures{
-  display: inline;
+text-align: center;
 }
 
 .weather-forecast-temperature-max{
@@ -193,3 +194,4 @@ li:first-letter {
   display: block;
   margin: 10px auto;
 }
+

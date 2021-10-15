@@ -109,10 +109,7 @@ function displayForecast(response){
         <div>
         <h3 class="weather-forecast-date">${formatDay(forecastDay.dt)}</h3>
         <img id="center" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
-        <div>
-        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span> </div>
-        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span> </div>
-        </div>
+        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span> <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span></div>
       </div>
 
 
