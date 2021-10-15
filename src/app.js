@@ -30,6 +30,14 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function getForecast(coordinates){
+  console.log(coordinates);
+  let apiKey = "30576d24fe7c955bdd206c12086c3d03";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response){
 
     let iconElement = document.querySelector("#icon");
@@ -53,11 +61,13 @@ function displayTemperature(response){
 
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  getForecast(response.data.coord);
 }
 
 
 function search(city){
-let apiKey = "30576d24fe7c955bdd206c12086c3d03"
+let apiKey = "30576d24fe7c955bdd206c12086c3d03";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -72,24 +82,36 @@ function handleSubmit(event){
 let form = document.querySelector("#container-search");
 form.addEventListener("submit", handleSubmit);
 
-function displayForecast(){
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response){
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
 
   let forecastHTML = `<section class="weather-forecast-prediction">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
     forecastHTML =
       forecastHTML +
       `
       <section class="weather-forecast-prediction" id="forecast">
 
         <div>
-        <h3 class="weather-forecast-date">${day}</h3>
-        <img id="center" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
+        <h3 class="weather-forecast-date">${formatDay(forecastDay.dt)}</h3>
+        <img id="center" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
         <div>
-        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-max">18 °C </span> </div>
-        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-min">12 °C </span> </div>
+        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span> </div>
+        <div class="weather-forecast-temperatures"> <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span> </div>
         </div>
       </div>
 
@@ -97,6 +119,7 @@ function displayForecast(){
       </section>
         
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</section>`;
@@ -104,5 +127,3 @@ function displayForecast(){
   console.log(forecastHTML);
 }
 
-
-displayForecast();

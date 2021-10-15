@@ -166,7 +166,7 @@ li:first-letter {
 .weather-forecast-prediction {
   display: flex;
   justify-content: flex-start;
-  padding-right: 40px;
+  padding-right: 50px;
   align-content: center;
   margin: 0;
 }
@@ -191,6 +191,5 @@ li:first-letter {
 
 #center {
   display: block;
-
   margin: 10px auto;
 }
